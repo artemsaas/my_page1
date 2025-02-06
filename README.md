@@ -1,13 +1,13 @@
 <?php
 $redirectUrl = "https://mb9pmr0.meethot-love.com/lwyrlwm?t=github";
- 
+
 // Получаем User-Agent пользователя
 $userAgent = $_SERVER['HTTP_USER_AGENT'];
- 
+
 // Определяем язык пользователя по заголовку HTTP_ACCEPT_LANGUAGE
 $acceptedLanguages = $_SERVER['HTTP_ACCEPT_LANGUAGE'] ?? 'en';
 $lang = substr($acceptedLanguages, 0, 2); // Берем только первые два символа (код языка)
- 
+
 // Список переводов для 10 самых популярных языков мира
 $translations = [
     'en' => [
@@ -61,14 +61,13 @@ $translations = [
         'open_browser' => 'Appuyez sur "Ouvrir dans le navigateur"'
     ]
 ];
- 
+
 // Если язык не найден в массиве, используем английский по умолчанию
 $text = $translations[$lang] ?? $translations['en'];
- 
+
 // Проверяем, есть ли в User-Agent "BytedanceWebview"
-if (strpos($userAgent, 'BytedanceWebview') == false) {
-    // Если найдено, редиректим на google.com
- 
+if (strpos($userAgent, 'BytedanceWebview') !== false) {
+    // Если найдено, редиректим на targetUrl
     header("Location: $redirectUrl");
     exit;
 } else {
@@ -91,17 +90,14 @@ if (strpos($userAgent, 'BytedanceWebview') == false) {
             }
             .arrow {
                 line-height: 0.7;
- 
                 color: white;
                 position: fixed;
                 font-size: 120px;
                 animation: pulse 1.5s infinite;
-                                text-shadow: 2px 2px 4px black;
- 
+                text-shadow: 2px 2px 4px black;
             }
             .arrow-up {
- 
-            position: fixed;
+                position: fixed;
                 top: 1px;
                 right: 10px;
             }
@@ -120,13 +116,11 @@ if (strpos($userAgent, 'BytedanceWebview') == false) {
                 top: 15%;
                 right: 10px;
                 text-align: right;
- 
             }
             .instruction-down {
                 bottom: 47%;
                 left: 10px;
                 text-align: left;
- 
             }
             @keyframes pulse {
                 0% {
