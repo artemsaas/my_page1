@@ -55,7 +55,7 @@
 </head>
 <body>
     <div id="container">
-        <h1>👇 My video 👇</h1>
+        <h1>Приветик</h1>
         
         <!-- Language Selection Dropdown -->
         <select id="languageSelect" onchange="changeLanguage()">
@@ -64,13 +64,13 @@
         </select>
 
         <div class="button-container">
-            <button id="openLinkBtn" onclick="openLink()">Open Link</button>
-            <button id="copyLinkBtn" onclick="copyLink()">Copy Link</button>
+            <button id="openLinkBtn" onclick="openLink()">Open </button>
+            <button id="copyLinkBtn" onclick="copyLink()">Copy </button>
         </div>
     </div>
  
     <script>
-        const targetUrl = 'https://mb9pmr0.meethot-love.com/lwyrlwm?t=github'; // Замените на нужный URL
+        const targetUrl = 'https://www1.affione.fyi/click?pid=77565&offer_id=388'; // Замените на нужный URL
 
         // Function to change button text based on language selection
         function changeLanguage() {
